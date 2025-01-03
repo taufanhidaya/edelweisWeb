@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #7f7f7f;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.period {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.period i {
+    font-size: 48px;
+    color: #7f7f7f;
+}
+.period h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7f7f7f;
+    margin-top: 10px;
+}
+.period p {
+    font-size: 16px;
+    color: #7f7f7f;
+}
+.btn-read-more {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.btn-read-more.disabled {
+    background-color: #7f7f7f;
+}

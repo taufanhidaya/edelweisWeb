@@ -1,0 +1,244 @@
+/* Organization Chart Base Styles */
+.org-chart {
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+
+/* Card Styles */
+.org-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    margin: 10px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.org-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.org-card h5 {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.org-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Line Connectors */
+.vertical-line {
+    width: 2px;
+    background-color: #4CAF50;
+    position: absolute;
+    z-index: 1;
+}
+
+.bottom-line {
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% - 20px);
+}
+
+.horizontal-line {
+    height: 2px;
+    background-color: #4CAF50;
+    position: absolute;
+    z-index: 1;
+}
+
+.first-level-line {
+    width: 80%;
+    top: 50%;
+}
+
+.second-level-line {
+    width: 90%;
+    top: 0;
+}
+
+/* Department Sections */
+.department-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 20px;
+}
+
+.dept-line {
+    height: 30px;
+    top: -30px;
+}
+
+/* Secretary Section Specific */
+.secretary-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.secretary-line {
+    width: 2px;
+    height: 30px;
+    background-color: #4CAF50;
+    margin: 10px 0;
+}
+
+/* Staff Container */
+.staff-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.staff-container .org-card {
+    min-width: 150px;
+    padding: 10px;
+}
+
+/* First Level Specific */
+.first-level {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Department Level */
+.departments-level {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Connector Lines for Departments */
+.department-connector {
+    position: absolute;
+    background-color: #FFD700;
+    z-index: 1;
+}
+
+.left-department-line {
+    width: 2px;
+    height: 100px;
+    left: 10%;
+    top: 20px;
+}
+
+.right-department-line {
+    width: 2px;
+    height: 100px;
+    right: 10%;
+    top: -20px;
+}
+
+/* Classes untuk menggeser card */
+.shift-left {
+  transform: translateX(-150px); /* Geser ke kiri 100px */
+}
+
+.shift-right {
+  transform: translateX(100px); /* Geser ke kanan 100px */
+}
+
+.shift-left-small {
+  transform: translateX(-50px); /* Geser ke kiri sedikit */
+}
+
+.shift-right-small {
+  transform: translateX(50px); /* Geser ke kanan sedikit */
+}
+
+/* Pergeseran untuk level department */
+.department-section.shift-far-left {
+  transform: translateX(-150px);
+}
+
+.department-section.shift-far-right {
+  transform: translateX(150px);
+}
+
+/* Pergeseran untuk staff container */
+.staff-container.shift-left {
+  transform: translateX(-50px);
+}
+
+.staff-container.shift-right {
+  transform: translateX(50px);
+}
+
+/* Pergeseran untuk secretary section */
+.secretary-section.shift-right {
+  transform: translateX(100px);
+}
+
+/* Tambahkan transition untuk animasi smooth */
+.org-card,
+.department-section,
+.staff-container,
+.secretary-section {
+  transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .shift-left, .shift-right {
+      transform: translateX(0);
+  }
+  .shift-left-small, .shift-right-small {
+      transform: translateX(0);
+  }
+  .department-section.shift-far-left,
+  .department-section.shift-far-right {
+      transform: translateX(0);
+  }
+  .staff-container.shift-left,
+  .staff-container.shift-right {
+      transform: translateX(0);
+  }
+  .secretary-section.shift-right {
+      transform: translateX(0);
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}

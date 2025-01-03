@@ -1,0 +1,129 @@
+/* Footer base styles */
+.footer {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #FFD700 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #000000, #FFD700, #000000);
+}
+
+/* Logo section */
+.footer .img-fluid {
+    filter: drop-shadow(0 0 3px #FFD700);
+}
+
+.footer span.h5 {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Headings */
+.footer h5.text-uppercase {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Links */
+.footer .list-unstyled a {
+    color: #FFD700 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.footer .list-unstyled a::before {
+    content: '►';
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.footer .list-unstyled a:hover {
+    color: #ffffff !important;
+    padding-left: 1.5rem;
+}
+
+.footer .list-unstyled a:hover::before {
+    opacity: 1;
+}
+
+/* Bottom section */
+.footer .text-muted {
+    color: #FFD700 !important;
+}
+
+.footer .text-muted a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .text-muted a:hover {
+    color: #ffffff;
+}
+
+/* Social media icons */
+.footer .bi {
+    color: #FFD700;
+    transition: all 0.3s ease;
+}
+
+.footer .bi:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Social media links */
+.footer .text-dark {
+    background: linear-gradient(45deg, #000000, #1a1a1a);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer .text-dark:hover {
+    background: #FFD700;
+}
+
+.footer .text-dark:hover .bi {
+    color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+    
+    .footer h5.text-uppercase {
+        margin-top: 1.5rem;
+    }
+    
+    .footer .list-unstyled a {
+        padding-left: 0;
+    }
+    
+    .footer .list-unstyled a:hover {
+        padding-left: 0.5rem;
+    }
+}
